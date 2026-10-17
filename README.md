@@ -71,8 +71,7 @@
 
 ## 安装与使用
 
-> 通用原理只有一句：**把 `SKILL.md` 放进目标 AI 工具的 skills 目录，文件夹名保持 `ten-step-learning`。**
-> 不同工具只是目录不同，不需要为每个工具记一条命令。
+> 通用原理只有一句：**把整个 skill 文件夹放进目标 AI 工具的 skills 目录，文件夹名保持 `ten-step-learning`。**
 
 ### 方式一：让 AI 自己装（最省事）
 
@@ -92,30 +91,14 @@ https://github.com/xiayuyang750/ten-step-learning
 
 ### 方式二：手动放置（通用）
 
-下载或克隆仓库后，把 `SKILL.md` 放到对应目录：
+下载 ZIP 或执行 `git clone https://github.com/xiayuyang750/ten-step-learning.git`，然后把整个 `ten-step-learning/` 文件夹移动到目标工具的 skills 目录：
 
 ```text
 # Trae CN
 ~/.trae-cn/skills/ten-step-learning/SKILL.md
-
-# Trae 国际版
-~/.trae/skills/ten-step-learning/SKILL.md
-
-# Claude Code（示例，具体以官方文档为准）
-~/.claude/skills/ten-step-learning/SKILL.md
 ```
 
-其他工具同理：在设置里找 Skills、扩展或用户数据目录，规则一致；找不到就直接用方式一。
-如果工具有 Skills 管理界面，也可以直接「新建 Skill」并选择这个 `SKILL.md`。
-Windows 下 `~` 即 `C:\Users\<用户名>`。
-
-### 方式三：Git 克隆
-
-```bash
-git clone https://github.com/xiayuyang750/ten-step-learning.git
-```
-
-把克隆出的 `ten-step-learning/` 整个目录移动到目标工具的 skills 目录即可。
+最终路径必须是 `<skills 目录>/ten-step-learning/SKILL.md`。若下载 ZIP，解压后把文件夹重命名为 `ten-step-learning`。其他工具同理，找到它的 skills 目录放进去即可；找不到就直接用方式一。Windows 下 `~` 即 `C:\Users\<用户名>`。
 
 ### 开始使用
 
