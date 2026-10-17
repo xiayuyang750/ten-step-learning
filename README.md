@@ -82,13 +82,6 @@
 目录名保持 ten-step-learning，安装完成后告诉我实际落地路径。
 ```
 
-以 Trae 为例：
-
-```text
-请帮我把这个网址以 skill 的形式安装部署到 Trae：
-https://github.com/xiayuyang750/ten-step-learning
-```
-
 ### 方式二：手动放置（通用）
 
 下载 ZIP 或执行 `git clone https://github.com/xiayuyang750/ten-step-learning.git`，然后把整个 `ten-step-learning/` 文件夹移动到目标工具的 skills 目录：
