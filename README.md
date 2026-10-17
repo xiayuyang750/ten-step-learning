@@ -71,9 +71,28 @@
 
 ## 安装与使用
 
-### 方式一：直接复制（推荐）
+> 通用原理只有一句：**把 `SKILL.md` 放进目标 AI 工具的 skills 目录，文件夹名保持 `ten-step-learning`。**
+> 不同工具只是目录不同，不需要为每个工具记一条命令。
 
-把 `SKILL.md` 放进对应目录：
+### 方式一：让 AI 自己装（最省事）
+
+把下面这句话发给任意支持 Skill 的 AI 工具：
+
+```text
+请把 https://github.com/xiayuyang750/ten-step-learning 以 skill 的形式安装到当前工具，
+目录名保持 ten-step-learning，安装完成后告诉我实际落地路径。
+```
+
+以 Trae 为例：
+
+```text
+请帮我把这个网址以 skill 的形式安装部署到 Trae：
+https://github.com/xiayuyang750/ten-step-learning
+```
+
+### 方式二：手动放置（通用）
+
+下载或克隆仓库后，把 `SKILL.md` 放到对应目录：
 
 ```text
 # Trae CN
@@ -81,21 +100,22 @@
 
 # Trae 国际版
 ~/.trae/skills/ten-step-learning/SKILL.md
+
+# Claude Code（示例，具体以官方文档为准）
+~/.claude/skills/ten-step-learning/SKILL.md
 ```
 
-目录名必须是 `ten-step-learning`，与 `SKILL.md` 里的 `name` 保持一致。
+其他工具同理：在设置里找 Skills、扩展或用户数据目录，规则一致；找不到就直接用方式一。
+如果工具有 Skills 管理界面，也可以直接「新建 Skill」并选择这个 `SKILL.md`。
+Windows 下 `~` 即 `C:\Users\<用户名>`。
 
-### 方式二：克隆仓库
+### 方式三：Git 克隆
 
 ```bash
-git clone https://github.com/xiayuyang750/ten-step-learning.git ~/.trae-cn/skills/ten-step-learning
+git clone https://github.com/xiayuyang750/ten-step-learning.git
 ```
 
-Windows PowerShell：
-
-```powershell
-git clone https://github.com/xiayuyang750/ten-step-learning.git "$env:USERPROFILE\.trae-cn\skills\ten-step-learning"
-```
+把克隆出的 `ten-step-learning/` 整个目录移动到目标工具的 skills 目录即可。
 
 ### 开始使用
 
@@ -129,7 +149,7 @@ A：有固定步骤、有交付物、有考试和复述。区别不在答案，�
 A：可以。说「直接考我」「只帮我挑 5 个资料」都行。
 
 **Q：必须用 Trae 吗？**
-A：任何支持 `SKILL.md` 约定的 AI 工具都可以，目录规则按对应工具调整。
+A：不必。任何支持 `SKILL.md` 约定的 AI 工具都可以，目录规则按对应工具调整。
 
 **Q：生成的文件在哪？**
 A：默认在 `学习-<主题>/`，包含 `01-五视角.md` 到 `10-速查表.md`。
